@@ -1,15 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import Menu from '@/assets/icon/Menu'
 
 export default function Navbar() {
     return (
         <Container>
+            <Menu />
             <div className='CenterFlex'>
                 <button>Home</button>
-                <button>Home</button>
-                <button>Home</button>
-                <button>Home</button>
-                <button>Home</button>
+                <button>About</button>
+                <button>Work</button>
+                <button>Content</button>
+                <button>Resume</button>
             </div>
         </Container>
     )
@@ -28,13 +30,13 @@ const Container = styled.div`
        
     }
     button{
-        width: 100px;
+        width: 130px;
         height: 50px;
         border-radius: 1rem;
         border: none;
         background-color: #FFD966s;
         margin: 0 20px;
-        padding: 0 20px;
+        padding: 0 ;
         font-size: 1.5rem;
         font-weight: bold;
         color: #DFA67B;
