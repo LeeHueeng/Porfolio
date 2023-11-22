@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import Menu from '@/assets/icon/Menu'
+import Menu from '../assets/icon/Menu.js'
 
 export default function Navbar() {
     return (
         <Container>
-            <Menu />
+            <div className='LeftMenu'>
+                <Menu />
+            </div>
             <div className='CenterFlex'>
+
                 <button>Home</button>
                 <button>About</button>
                 <button>Work</button>
@@ -26,6 +29,9 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #DFA67B;
+    .LeftMenu{
+        
+    }
     .CenterFlex{
        
     }
