@@ -13,12 +13,10 @@ export default function About() {
 
     if (gameStartElement) {
       gameStartElement.style.display = 'none';
-
     }
 
     if (gameElement) {
       gameElement.style.display = 'block';
-
     }
 
     setTimeout(function () {
@@ -57,9 +55,38 @@ export default function About() {
 
   };
 
+  const NoGame = () => {
+    const gameStartElement = document.getElementById('gamestart');
+    const moonElement = document.getElementById('moon');
+    const multiElement = document.getElementById('multi');
+    const snsElement = document.getElementById('sns');
+    const resulttextElement = document.getElementById('resulttext');
+    const gameElement = document.getElementById('game');
 
+    console.log("gameStartElement");
 
+    if (resulttextElement) {
+      resulttextElement.style.display = 'none';
+    }
+    if (gameStartElement) {
+      gameStartElement.style.display = 'none';
+      console.log("gameStartElement");
+    }
+    if (gameElement) {
+      gameElement.style.display = 'block';
+    }
 
+    if (moonElement) {
+      moonElement.style.visibility = 'visible';
+    }
+    if (multiElement) {
+      multiElement.style.visibility = 'visible';
+    }
+    if (snsElement) {
+      snsElement.style.visibility = 'visible';
+    }
+
+  }
 
   const inputChange = (e) => {
 
@@ -115,12 +142,11 @@ export default function About() {
         </pre>
         <div>
           <button onClick={GameStart}>예</button>
-          <button>아니요</button>
+          <button onClick={NoGame}>아니요</button>
         </div>
       </div>
       <div id='game'>
         <div className='gandan'>
-
           <h1>
             🐙 이현우를 3가지 단어로 표현한다면?
           </h1>
@@ -142,9 +168,9 @@ export default function About() {
             <p> sns 및 사람들과의 인간관계를 넓히는 것을 좋아합니다.</p>
             <p>처음 보더라도 친근감있게 금방 다가가는 편입니다.</p>
           </div>
-        </div>
-        <div className='result'>
-          <input type='text' onChange={inputChange} value={rainresult} id="rainresult"></input>
+          <div className='result' id='resulttext'>
+            <input type='text' onChange={inputChange} value={rainresult} id="rainresult"></input>
+          </div>
         </div>
       </div>
 
@@ -228,8 +254,7 @@ input {
   justify-content: center;
   height: 70vh;
   align-items: center;
-  flex-direction: column;
-  overflow: hidden;
+  flex-direction: column; 
   z-index: 0;
 }
 
