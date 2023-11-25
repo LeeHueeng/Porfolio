@@ -22,6 +22,7 @@ export default function Navbar() {
 
 const Container = styled.div`
     position: fixed;
+    z-index: 100;
     top:0;
     width:100%;
     height:10vh;
