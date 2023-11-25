@@ -15,10 +15,10 @@ export default function Navbar() {
             <div className='CenterFlex'>
 
                 <button onClick={() => goToScroll("Home")}>Home</button>
-                <button>About</button>
-                <button>Work</button>
-                <button>Content</button>
-                <button>Resume</button>
+                <button onClick={() => goToScroll("About")}>About</button>
+                <button onClick={() => goToScroll("Work")}>Work</button>
+                <button onClick={() => goToScroll("Content")}>Content</button>
+                <button onClick={() => goToScroll("Resume")}>Resume</button>
             </div>
         </Container>
     )

@@ -7,11 +7,21 @@ import Resume from './Components/Resume';
 function App() {
   return (
     <div >
-      <Home />
-      <About />
-      <Work />
-      <Content />
-      <Resume />
+      <div className='Home'>
+        <Home />
+      </div>
+      <div className='About'>
+        <About />
+      </div>
+      <div className='Work'>
+        <Work />
+      </div>
+      <div className='Content'>
+        <Content />
+      </div>
+      <div className='Resume'>
+        <Resume />
+      </div>
     </div>
   );
 }
