@@ -187,16 +187,16 @@ export default function About() {
 
 const AboutContainer = styled.div`
 background-color: #fff2cc;
-width: 100%;
+width:100wh;
 height: 100vh;
-margin-top: 10vh;
+padding: 10vh;
 overflow: hidden;
 
 .wrap {
   position: absolute;
   background-color: #FFD966;
   width: 70vw;
-  top: 20vh;
+  top: 120vh;
   left: 15vw;
   z-index: 1;
   height: 70vh;
@@ -294,7 +294,7 @@ input {
   animation: fallAnimation 2s linear forwards;
 }
 #rain, #rain2, #rain3 {
-  top : 30vh;
+  top : 130vh;
   position: absolute;
   display: none;
   font-size: 2rem;

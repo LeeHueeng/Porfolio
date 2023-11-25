@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import Menu from '../assets/icon/Menu.js'
 
 export default function Navbar() {
+    function goToScroll(name) {
+        var location = document.querySelector("." + name).offsetTop;
+        window.scrollTo({ top: location, behavior: 'smooth' });
+    }
     return (
         <Container>
             <div className='LeftMenu'>
@@ -10,7 +14,7 @@ export default function Navbar() {
             </div>
             <div className='CenterFlex'>
 
-                <button>Home</button>
+                <button onClick={() => goToScroll("Home")}>Home</button>
                 <button>About</button>
                 <button>Work</button>
                 <button>Content</button>
