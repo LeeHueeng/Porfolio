@@ -3,7 +3,8 @@ import About from './Components/About';
 
 function App() {
   return (
-    <div>
+    <div >
+
       <About />
     </div>
   );
