@@ -11,6 +11,7 @@ export default function About() {
     const rainElement = document.getElementById('rain');
     const gameStartElement = document.getElementById('gamestart');
 
+
     if (gameStartElement) {
       gameStartElement.style.display = 'none';
     }
@@ -48,6 +49,7 @@ export default function About() {
           rainElement.style.transform = `translateX(${x}px) `;
           rainElement.style.display = `block`;
           rainElement.classList.add('falling');
+
         }
       }, 4000);
     }, 3000);
@@ -74,6 +76,7 @@ export default function About() {
     }
     if (gameElement) {
       gameElement.style.display = 'block';
+      gameElement.style.animation = `win 2s linear forwards`;
     }
 
     if (moonElement) {
@@ -86,6 +89,8 @@ export default function About() {
       snsElement.style.visibility = 'visible';
     }
 
+
+
   }
 
   const inputChange = (e) => {
@@ -94,6 +99,7 @@ export default function About() {
     const rainElement2 = document.getElementById('rain2');
     const rainElement3 = document.getElementById('rain3');
     const rainresultElement = document.getElementById('rainresult');
+    const gameElement = document.getElementById('game');
 
     const inputValue = e.target.value;
     setRainresult(inputValue);
@@ -113,16 +119,17 @@ export default function About() {
       }
       setRainresult("");
     }
-    else if (rainresult === "sns") {
+    else if (rainresult === "sns" || rainresult === "SNS") {
       const snsElement = document.getElementById('sns');
-      if (snsElement) {
+      if (snsElement && rainElement3 && rainresultElement && gameElement) {
         snsElement.style.visibility = 'visible';
         rainElement3.style.display = `none`;
         rainresultElement.style.display = `none`;
-
+        gameElement.style.animation = `win 2s linear forwards`;
       }
       setRainresult("");
     }
+
 
   }
 
@@ -203,7 +210,11 @@ overflow: hidden;
   h1 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 3rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10rem;
   }
   pre {
     font-size: 1.5rem;
@@ -229,6 +240,7 @@ overflow: hidden;
     }
   }
 }
+
 input {
   width: 30%;
   height: 5vh;
@@ -256,6 +268,16 @@ input {
   align-items: center;
   flex-direction: column; 
   z-index: 0;
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+
+  }
 }
 
 #moon, #multi, #sns{
@@ -266,6 +288,8 @@ input {
 #game{
   display: none;
 }
+
+
 #rain.falling, #rain2.falling, #rain3.falling{
   animation: fallAnimation 2s linear forwards;
 }
@@ -280,7 +304,11 @@ input {
 
 }
 
-
+@keyframes win {
+  to {
+    transform: rotateY( 360deg );
+  }
+}
 @keyframes fallAnimation {
   to {
     transform: translateY(300px) translateX(${Math.floor(Math.random() * 201) - 100}px);
