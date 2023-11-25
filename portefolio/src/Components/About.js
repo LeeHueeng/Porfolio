@@ -9,11 +9,16 @@ export default function About() {
 
     const gameElement = document.getElementById('game');
     const rainElement = document.getElementById('rain');
-    const gametElement = document.getElementById('gamestart');
+    const gameStartElement = document.getElementById('gamestart');
 
-    if (gametElement) {
-      gameElement.style.display = `none`;
-      console.log("gamestart");
+    if (gameStartElement) {
+      gameStartElement.style.display = 'none';
+
+    }
+
+    if (gameElement) {
+      gameElement.style.display = 'block';
+
     }
 
     setTimeout(function () {
@@ -59,6 +64,10 @@ export default function About() {
   const inputChange = (e) => {
 
     const rainElement = document.getElementById('rain');
+    const rainElement2 = document.getElementById('rain2');
+    const rainElement3 = document.getElementById('rain3');
+    const rainresultElement = document.getElementById('rainresult');
+
     const inputValue = e.target.value;
     setRainresult(inputValue);
     if (rainresult === '문어') {
@@ -73,7 +82,7 @@ export default function About() {
       const multiElement = document.getElementById('multi');
       if (multiElement) {
         multiElement.style.visibility = 'visible';
-
+        rainElement2.style.display = `none`;
       }
       setRainresult("");
     }
@@ -81,6 +90,9 @@ export default function About() {
       const snsElement = document.getElementById('sns');
       if (snsElement) {
         snsElement.style.visibility = 'visible';
+        rainElement3.style.display = `none`;
+        rainresultElement.style.display = `none`;
+
       }
       setRainresult("");
     }
@@ -135,6 +147,7 @@ export default function About() {
           <input type='text' onChange={inputChange} value={rainresult} id="rainresult"></input>
         </div>
       </div>
+
     </AboutContainer>
   );
 }
