@@ -9,7 +9,7 @@ export default function Home() {
                     <img src='/photo.jpg' width={200} />
                     <h1>이현우</h1>
                 </div>
-                <div className='Content'>
+                <div className='content'>
                     <div className='ContentLeft'>
                         <div>
                             <h3>👨‍🦰프로필</h3>
@@ -73,7 +73,7 @@ const Container = styled.div`
                 color: black;
             }
         }
-        .Content{
+        .content{
             width: 100%;
             height: 80%;
             display: flex;
@@ -93,5 +93,13 @@ const Container = styled.div`
                 color: black;
             }   
         }
+    }
+    img{
+   animation: win 1s linear forwards;
+    @keyframes win {
+        to {
+          transform: rotateY( 360deg );
+        }
+      }
     }
 `

@@ -10,12 +10,12 @@ export default function Work() {
 const Container = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: #DFA67B;
+    background-color: #fff2cc   ;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 3rem;
     font-weight: bold;
-    color: #FFF2CC;
+    color: #ff9900;
 `
