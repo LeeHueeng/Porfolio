@@ -10,22 +10,31 @@ export default function Home() {
                     <h1>이현우</h1>
                 </div>
                 <div className='Content'>
-                    <div>
-                        <h3>👨‍🦰프로필</h3>
-                        <p>👶 1999년 04월 14일 출생</p>
-                        <p>🏫 도당고등학교 (2015~2018년)</p>
-                        <p> 🧑‍🎓 성공회대학교 (2018 ~ 미정)</p>
+                    <div className='ContentLeft'>
+                        <div>
+                            <h3>👨‍🦰프로필</h3>
+                            <p>👶 1999년 04월 14일 출생</p>
+                            <p>🏫 도당고등학교 (2015~2018년)</p>
+                            <p> 🧑‍🎓 성공회대학교 (2018 ~ 미정)</p>
+                        </div>
+                        <div>
+                            <h3>💡 연락처</h3>
+                            <p>📭  zzxx373014@gmail.com</p>
+                            <p>📞  010-8408-9384</p>
+                            <p>📘  www.hueeng.com</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3>💡 연락처</h3>
-                        <p>📭  zzxx373014@gmail.com</p>
-                        <p>📞  010-8408-9384</p>
-                        <p>📘  www.hueeng.com</p>
-                    </div>
+                    <div className='ContentRight'>
+                        <div>
+                            <h3>🎞 Career</h3>
+                            <p>GiantStep 기획자 인턴 (2022.01~2022.12)</p>
 
+                        </div>
+                    </div>
                 </div>
             </div>
-        </Container>
+
+        </Container >
     )
 }
 
@@ -76,7 +85,7 @@ const Container = styled.div`
             h3{
                 font-size: 2rem;
                 font-weight: bold;
-                color: black;
+                color: black;   
             }
             p{
                 font-size: 1rem;
