@@ -8,11 +8,14 @@ export default function Work() {
                 <div className='title'>
                     <h1>Work</h1>
                 </div>
-                <div className='content'>
-                    <div className='select'></div>
-                    <div className='select'></div>
-                    <div className='select'></div>
-                    <div className='select'></div>
+                <div className='contents'>
+                    <div className='firstcontent'>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                    </div>
+
                     <div className='select'></div>
                     <div className='select'></div>
                     <div className='select'></div>
@@ -34,11 +37,30 @@ const Container = styled.div`
     font-size: 3rem;
     font-weight: bold;
     color: #ff9900;
-    .content{
+    .firstcontent{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+        width: 100%;
+    }      
+    .select{
+        width:200px;
+        margin: 0 10px;
+        height: 90px;
+        border: 1px solid black;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            background-color: #ff9900;
+            h1{
+                color: white;
+                }
+            }
+        }
+    
     .container{
         width: 80%;
         height: 80%;
@@ -51,22 +73,7 @@ const Container = styled.div`
         border: 1px solid black;
         background-color: white;
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
-        .select{
-            width:200px;
-            height: 50px;
-            border: 1px solid black;
-            border-radius: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            &:hover{
-                background-color: #ff9900;
-                h1{
-                    color: white;
-                    }
-                }
-            }
+  
         .title{
             width: 70%;
             height: 20%;
@@ -80,12 +87,13 @@ const Container = styled.div`
                 color: black;
             }
         }
-        .content{
-            width: 100%;
+        .contents{
+            width: 150vw;
             height: 80%;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             div{
                 width: 50%;
             }
