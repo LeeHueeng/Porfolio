@@ -15,11 +15,24 @@ export default function Work() {
                         <div className='select'></div>
                         <div className='select'></div>
                     </div>
-
-                    <div className='select'></div>
-                    <div className='select'></div>
-                    <div className='select'></div>
-                    <div className='select'></div>
+                    <div className='firstcontent'>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                    </div>
+                    <div className='firstcontent'>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                    </div>
+                    <div className='firstcontent'>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                        <div className='select'></div>
+                    </div>
                 </div>
             </div>
         </Container>
@@ -42,10 +55,11 @@ const Container = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
+        marogin-bottom: 20px;
     }      
     .select{
         width:200px;
-        margin: 0 10px;
+        margin: 10px 10px;
         height: 90px;
         border: 1px solid black;
         border-radius: 1rem;
