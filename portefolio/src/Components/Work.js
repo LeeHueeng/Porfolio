@@ -9,29 +9,66 @@ export default function Work() {
                 <div className='contents'>
                     <div className='firstcontent'>
                         <div className='select'>
+                            <h1>hueeng 사이트</h1>
                             <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
                         </div>
-                        <div className='select'></div>
-                        <div className='select'></div>
-                        <div className='select'></div>
+                        <div className='select'>
+                            <h1>Giant Step 기획자 인턴</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>알고리즘 어울림</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>unity game 제작 </h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
                     </div>
                     <div className='firstcontent'>
-                        <div className='select'></div>
-                        <div className='select'></div>
-                        <div className='select'></div>
-                        <div className='select'></div>
+                        <div className='select'>
+                            <h1>IT동아리 S.owl 활동</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>나만의 커뮤니티 제작</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>문서관리 웹사이트 제작(DMS)</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>IT 경진대회 대상</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
                     </div>
                     <div className='firstcontent'>
-                        <div className='select'></div>
-                        <div className='select'></div>
-                        <div className='select'></div>
-                        <div className='select'></div>
+                        <div className='select'>
+                            <h1>창업 동아리</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>coding bottle 활동</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>캘린더 제작 프로젝트</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>채우자</div>
                     </div>
                     <div className='firstcontent'>
-                        <div className='select'></div>
-                        <div className='select'></div>
-                        <div className='select'></div>
-                        <div className='select'></div>
+                        <div className='select'>채우자</div>
+                        <div className='select'>채우자</div>
+                        <div className='select'>
+                            <h1>내가 했던 활동</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
+                        <div className='select'>
+                            <h1>내가 들었던 수업</h1>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,6 +86,7 @@ const Container = styled.div`
     flex-direction: column;
     font-size: 3rem;
     font-weight: bold;
+
     color: #ff9900;
     .firstcontent{
         display: flex;
@@ -58,20 +96,26 @@ const Container = styled.div`
         marogin-bottom: 20px;
     }      
     .select{
+        position: relative;
         width:200px;
         height: 120px;
         margin: 10px 10px;
-       
         border: 1px solid black;
         border-radius: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         cursor: pointer;
         overflow: hidden;
+        h1{
+            margin: 0;
+            position: absolute;
+            top: 40%;
+            left: 8%;
+            z-index: 1;
+            font-size: 1rem;
+        }
         img{
             background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg');
             filter: blur(3px);
+         
         }
         &:hover{
             img{
