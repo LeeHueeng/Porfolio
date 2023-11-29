@@ -5,12 +5,12 @@ export default function Work() {
     return (
         <Container>
             <div className='container'>
-                <div className='title'>
-                    <h1>Work</h1>
-                </div>
+
                 <div className='contents'>
                     <div className='firstcontent'>
-                        <div className='select'></div>
+                        <div className='select'>
+                            <img src='https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg' width={500} />
+                        </div>
                         <div className='select'></div>
                         <div className='select'></div>
                         <div className='select'></div>
@@ -59,16 +59,25 @@ const Container = styled.div`
     }      
     .select{
         width:200px;
+        height: 120px;
         margin: 10px 10px;
-        height: 90px;
+       
         border: 1px solid black;
         border-radius: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        overflow: hidden;
+        img{
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg');
+            filter: blur(3px);
+        }
         &:hover{
+            img{
+            filter: blur(0px);
             background-color: #ff9900;
+        }
             h1{
                 color: white;
                 }

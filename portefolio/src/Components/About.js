@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 
@@ -137,50 +137,51 @@ export default function About() {
 
   return (
     <AboutContainer>
-      <div className='wrap' id="gamestart">
-        <h1> 간단한 미니게임을 해보시겠습니까? </h1>
-        <pre>
-          한글과 컴퓨터의 산성비 게임을 모티브로 만들었습니다.
-          <br />
-          <br />
-          떨어지는 단어를 입력하면 단어에 맞는 제 이야기가 나오게 됩니다. <br /><br />
+      <div className='backgroundcolor'>
+        <div className='wrap' id="gamestart">
+          <h1> 간단한 미니게임을 해보시겠습니까? </h1>
+          <pre>
+            한글과 컴퓨터의 산성비 게임을 모티브로 만들었습니다.
+            <br />
+            <br />
+            떨어지는 단어를 입력하면 단어에 맞는 제 이야기가 나오게 됩니다. <br /><br />
 
-          게임을 원치 않으시면 아니요를 클릭해 주세요
-        </pre>
-        <div>
-          <button onClick={GameStart}>예</button>
-          <button onClick={NoGame}>아니요</button>
-        </div>
-      </div>
-      <div id='game'>
-        <div className='gandan'>
-          <h1>
-            🐙 이현우를 3가지 단어로 표현한다면?
-          </h1>
-          <div id='rain'>문어</div>
-          <div id='rain2'>멀티탭</div>
-          <div id='rain3'>sns</div>
-
-          <div id="moon">
-            <h3>1. 문어</h3>
-            <p>여러가지 일을 진행하는 것을 좋아하며 호기심이 많은 편입니다.</p>
-          </div>
-          <div id="multi">
-            <h3>2. 멀티탭</h3>
-            <p>이사하는 첫날 설치하고 고장나지 않으면 볼일 없는 존재와 같이 묵묵히 일을 수행합니다.</p>
-          </div>
-          <div id="sns">
-
-            <h3>3. SNS</h3>
-            <p> sns 및 사람들과의 인간관계를 넓히는 것을 좋아합니다.</p>
-            <p>처음 보더라도 친근감있게 금방 다가가는 편입니다.</p>
-          </div>
-          <div className='result' id='resulttext'>
-            <input type='text' onChange={inputChange} value={rainresult} id="rainresult"></input>
+            게임을 원치 않으시면 아니요를 클릭해 주세요
+          </pre>
+          <div>
+            <button onClick={GameStart}>예</button>
+            <button onClick={NoGame}>아니요</button>
           </div>
         </div>
-      </div>
+        <div id='game'>
+          <div className='gandan'>
+            <h1>
+              🐙 이현우를 3가지 단어로 표현한다면?
+            </h1>
+            <div id='rain'>문어</div>
+            <div id='rain2'>멀티탭</div>
+            <div id='rain3'>sns</div>
 
+            <div id="moon">
+              <h3>1. 문어</h3>
+              <p>여러가지 일을 진행하는 것을 좋아하며 호기심이 많은 편입니다.</p>
+            </div>
+            <div id="multi">
+              <h3>2. 멀티탭</h3>
+              <p>이사하는 첫날 설치하고 고장나지 않으면 볼일 없는 존재와 같이 묵묵히 일을 수행합니다.</p>
+            </div>
+            <div id="sns">
+
+              <h3>3. SNS</h3>
+              <p> sns 및 사람들과의 인간관계를 넓히는 것을 좋아합니다.</p>
+              <p>처음 보더라도 친근감있게 금방 다가가는 편입니다.</p>
+            </div>
+            <div className='result' id='resulttext'>
+              <input type='text' onChange={inputChange} value={rainresult} id="rainresult"></input>
+            </div>
+          </div>
+        </div>
+      </div>
     </AboutContainer>
   );
 }
@@ -189,9 +190,19 @@ const AboutContainer = styled.div`
 background-color: #fff2cc;
 width:100wh;
 height: 100vh;
-padding: 10vh;
+padding: 5vh;
 overflow: hidden;
-
+display: flex;
+justify-content: center;
+align-items: center;
+.backgroundcolor{
+  background-color: white;
+  height: 80vh;
+  width: 80vw;
+  border-radius: 1rem;
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
 .wrap {
   position: absolute;
   background-color: #FFD966;
