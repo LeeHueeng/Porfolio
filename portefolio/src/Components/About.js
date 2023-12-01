@@ -126,7 +126,7 @@ export default function About() {
       if (snsElement && rainElement3 && rainresultElement && gameElement) {
         snsElement.style.visibility = 'visible';
         rainElement3.style.display = `none`;
-        rainresultElement.style.display = `none`;
+        rainresultElement.style.visibility = `hidden`;
         gameElement.style.animation = `win 2s linear forwards`;
       }
       setRainresult("");
@@ -138,8 +138,13 @@ export default function About() {
 
 
   return (
-    <div>
-      </div>
+    <div style={{ backgroundColor: "#fff2cc" }}>
+      <NavbarNameBox>
+        <div className='imgbox'>
+          <img src='https://cdg-portfolio.com/images/black-link.png' width="100%" onClick={() => goToScroll("About")} />
+        </div>
+        <h1>About</h1>
+      </NavbarNameBox>
       <AboutContainer>
         <div className='backgroundcolor'>
           <div className='wrap' id="gamestart">
@@ -175,7 +180,6 @@ export default function About() {
                 <p>이사하는 첫날 설치하고 고장나지 않으면 볼일 없는 존재와 같이 묵묵히 일을 수행합니다.</p>
               </div>
               <div id="sns">
-
                 <h3>3. SNS</h3>
                 <p> sns 및 사람들과의 인간관계를 넓히는 것을 좋아합니다.</p>
                 <p>처음 보더라도 친근감있게 금방 다가가는 편입니다.</p>
@@ -187,7 +191,7 @@ export default function About() {
           </div>
         </div>
       </AboutContainer>
-    </div >
+    </div>
   );
 }
 
@@ -195,11 +199,10 @@ const AboutContainer = styled.div`
 background-color: #fff2cc;
 width:100wh;
 height: 100vh;
-padding: 5vh;
-overflow: hidden;
+
 display: flex;
 justify-content: center;
-align-items: center;
+
 .backgroundcolor{
   background-color: white;
   height: 80vh;
@@ -212,7 +215,7 @@ align-items: center;
   position: absolute;
   background-color: #FFD966;
   width: 70vw;
-  top: 120vh;
+  top: 140vh;
   left: 15vw;
   z-index: 1;
   height: 70vh;
@@ -230,7 +233,7 @@ align-items: center;
   h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 10rem;
+    margin-top: 1rem;
   }
   pre {
     font-size: 1.5rem;
@@ -284,6 +287,7 @@ input {
   align-items: center;
   flex-direction: column; 
   z-index: 0;
+
   h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -291,7 +295,7 @@ input {
   h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
   }
 }
@@ -310,7 +314,7 @@ input {
   animation: fallAnimation 2s linear forwards;
 }
 #rain, #rain2, #rain3 {
-  top : 130vh;
+  top : 160vh;
   position: absolute;
   display: none;
   font-size: 2rem;
