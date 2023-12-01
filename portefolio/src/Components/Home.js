@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
 import { goToScroll } from '../utils/Scroll';
+import { NavbarNameBox } from '../styles/Title.js';
 
 export default function Home() {
     return (
         <Container>
-            <div className='NavbarNameBox'>
+            <NavbarNameBox>
                 <div className='imgbox'>
                     <img src='https://cdg-portfolio.com/images/black-link.png' width="100%" onClick={() => goToScroll("Home")} />
                 </div>
                 <h1>Home</h1>
-            </div>
+            </NavbarNameBox>
             <div className='Container'>
                 <div className='Title'>
                     <img src='/photo.jpg' width={200} />
@@ -45,6 +46,9 @@ export default function Home() {
     )
 }
 
+
+
+
 const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -56,31 +60,7 @@ const Container = styled.div`
     font-size: 48px;
     font-weight: bold;
     color: #ff9900;
-    .NavbarNameBox{
-        width: 100%;
-        height: 13vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20vh;
-        h1{
-            font-size: 48px;
-        }
-      
-    }
-    .imgbox{
-        width: 2rem;   
-        height: 2rem;
-        display: flex;
-        margin-right: 20px;
-        img{
-            &:hover{
-                filter: invert(50%);
-                cursor: pointer;
-            }
-            
-        }
-    }
+   
 
     .Container{
         width: 80%;
