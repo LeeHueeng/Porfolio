@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Menu from '../assets/icon/Menu.js'
+import { goToScroll } from '../utils/Scroll.js'
 
 export default function Navbar() {
-    function goToScroll(name) {
-        var location = document.querySelector("." + name).offsetTop;
-        window.scrollTo({ top: location, behavior: 'smooth' });
-    }
+
     return (
         <Container>
             <div className='LeftMenu'>

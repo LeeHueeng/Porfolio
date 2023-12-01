@@ -1,13 +1,20 @@
 import React from 'react'
 import styled from 'styled-components';
+import { goToScroll } from '../utils/Scroll';
 
 export default function Home() {
     return (
         <Container>
+            <div className='NavbarNameBox'>
+                <div className='imgbox'>
+                    <img src='https://cdg-portfolio.com/images/black-link.png' width="100%" onClick={() => goToScroll("Home")} />
+                </div>
+                <h1>Home</h1>
+            </div>
             <div className='Container'>
                 <div className='Title'>
                     <img src='/photo.jpg' width={200} />
-                    <h1>이현우</h1>
+                    <h1> 이현우</h1>
                 </div>
                 <div className='content'>
                     <div className='ContentLeft'>
@@ -46,20 +53,45 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: bold;
     color: #ff9900;
-    .Container{
-        width: 80%;
-        height: 80%;
-        margin-top: 5%;
+    .NavbarNameBox{
+        width: 100%;
+        height: 13vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 1rem;
-        border: 1px solid black;
+        margin-top: 20vh;
+        h1{
+            font-size: 48px;
+        }
+      
+    }
+    .imgbox{
+        width: 2rem;   
+        height: 2rem;
+        display: flex;
+        margin-right: 20px;
+        img{
+            &:hover{
+                filter: invert(50%);
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+    .Container{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        border: .0625rem solid black;
         background-color: white;
-        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+        box-shadow: 0 0 .625rem 0 rgba(0,0,0,0.5);
         .Title{
             width: 70%;
             height: 20%;
@@ -68,7 +100,7 @@ const Container = styled.div`
             align-items: center;
             flex-direction: column;
             h1{
-                font-size: 3rem;
+                font-size: 48px;
                 font-weight: bold;
                 color: black;
             }
@@ -83,12 +115,12 @@ const Container = styled.div`
                 width: 50%;
             }
             h3{
-                font-size: 2rem;
+                font-size: 32px;
                 font-weight: bold;
                 color: black;   
             }
             p{
-                font-size: 1rem;
+                font-size: 16px;
                 font-weight: bold;
                 color: black;
             }   
