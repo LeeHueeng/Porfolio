@@ -215,7 +215,7 @@ justify-content: center;
   position: absolute;
   background-color: #FFD966;
   width: 70vw;
-  top: 140vh;
+  top: 170vh;
   left: 15vw;
   z-index: 1;
   height: 70vh;
@@ -314,7 +314,7 @@ input {
   animation: fallAnimation 2s linear forwards;
 }
 #rain, #rain2, #rain3 {
-  top : 160vh;
+  top : 180vh;
   position: absolute;
   display: none;
   font-size: 2rem;
